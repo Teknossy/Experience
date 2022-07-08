@@ -10,10 +10,10 @@ namespace Teknossy.Experience.Entity
     {
         protected BaseEntity()
         {
-            IlkKayitTarihi = new DateTime(2020, 3, 5, 18, 9, 34, 763, DateTimeKind.Local).AddTicks(3287);
-            IlkKayitIp = "127.0.0.1";
-            IlkKayitKullaniciId = 0;
-            Silindi = false;
+            FirstTime = new DateTime(2020, 3, 5, 18, 9, 34, 763, DateTimeKind.Local).AddTicks(3287);
+            FirstUserIp = "127.0.0.1";
+            FirstUserId = 0;
+            IsActive = false;
             Guid = System.Guid.NewGuid().ToString();
         }
 
@@ -26,19 +26,19 @@ namespace Teknossy.Experience.Entity
 
         [Required]
         [StringLength(50, ErrorMessage = "IP adresi 50 karakterden fazla olamaz.")]
-        public string IlkKayitIp { get; set; }
+        public string FirstUserIp { get; set; }
 
-        public DateTime? IlkKayitTarihi { get; set; }
+        public DateTime? FirstTime { get; set; }
 
-        public int IlkKayitKullaniciId { get; set; }
+        public int FirstUserId { get; set; }
 
         [StringLength(50, ErrorMessage = "IP adresi 50 karakterden fazla olamaz.")]
-        public string SonKayitIp { get; set; }
+        public string LastUserIp { get; set; }
 
-        public DateTime? SonKayitTarihi { get; set; }
+        public DateTime? LastTime { get; set; }
 
-        public int? SonKayitKullaniciId { get; set; }
+        public int? LastUserId { get; set; }
 
-        public bool Silindi { get; set; }
+        public bool IsActive { get; set; }
     }
 }

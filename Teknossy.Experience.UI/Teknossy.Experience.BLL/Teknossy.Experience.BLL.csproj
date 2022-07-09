@@ -8,4 +8,8 @@
     <ProjectReference Include="..\Teknossy.Experience.DAL\Teknossy.Experience.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Logics\" />
+  </ItemGroup>
+
 </Project>

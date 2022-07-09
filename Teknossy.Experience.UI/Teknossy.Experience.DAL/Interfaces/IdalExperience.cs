@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Teknossy.Experience.DAL.DataAccess.User;
+using Teknossy.Experience.DAL.DataAccess.System;
 
 namespace Teknossy.Experience.DAL.Interfaces
 {

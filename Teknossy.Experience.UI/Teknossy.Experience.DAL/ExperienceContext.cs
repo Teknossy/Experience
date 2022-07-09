@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Teknossy.Experience.Entity.Models.User;
+using Teknossy.Experience.Entity.Models.System;
 
 namespace Teknossy.Experience.DAL
 {

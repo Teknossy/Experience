@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using Teknossy.Experience.Entity.Interfaces;
 
 namespace Teknossy.Experience.Entity
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntity : IEntity
     {
         protected BaseEntity()
         {

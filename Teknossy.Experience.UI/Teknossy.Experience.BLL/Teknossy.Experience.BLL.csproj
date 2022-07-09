@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Teknossy.Experience.DAL\Teknossy.Experience.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

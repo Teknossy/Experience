@@ -2,12 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Teknossy.Experience.Entity.Models.User;
 using Teknossy.Interfaces;
 
-namespace Teknossy.Experience.DAL.DataAccess
+namespace Teknossy.Experience.DAL.DataAccess.User
 {
-    public class dalUser : dalBase<User>
+    public class dalUser : dalBase<Teknossy.Experience.Entity.Models.User.User>
     {
         public dalUser(ITicket ticket, ExperienceContext db, IMapper mapper) : base(ticket, db, mapper)
         {

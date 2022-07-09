@@ -9,7 +9,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Teknossy.Experience.BLL;
+using Teknossy.Experience.BLL.Interfaces;
 using Teknossy.Experience.DAL;
+using Teknossy.Experience.DAL.Interfaces;
+using Teknossy.Interfaces;
 
 namespace Teknossy.Experience.UI
 {
@@ -25,6 +29,9 @@ namespace Teknossy.Experience.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ITicket, Ticket>();
+            services.AddScoped<IbllExperience, bllExperience>();
+            services.AddScoped<IdalExperience, dalExperience>();
             services.AddDbContext<ExperienceContext>(options => options.UseNpgsql(Configuration.GetConnectionString("cstrExperience"), b => b.MigrationsAssembly("Teknossy.Experience.DAL")));
             services.AddScoped<DbContext>(provider => provider.GetService<ExperienceContext>());
             services.AddControllersWithViews();

@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Teknossy.Experience.BLL\Teknossy.Experience.BLL.csproj" />
     <ProjectReference Include="..\Teknossy.Experience.DAL\Teknossy.Experience.DAL.csproj" />
   </ItemGroup>
 

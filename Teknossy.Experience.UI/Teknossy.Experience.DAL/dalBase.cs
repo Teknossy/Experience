@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Teknossy.Experience.DAL.Interfaces;
+using Teknossy.Experience.Entity;
 using Teknossy.Experience.Entity.Interfaces;
 using Teknossy.Interfaces;
 
@@ -168,6 +169,20 @@ namespace Teknossy.Experience.DAL
         }
 
         #endregion Sil
+
+        #region Geom
+
+        public static void UpdateGeom(BaseGeom ent, string WKTString, ExperienceContext db)
+        {
+            ent.Geom = WKTString;
+            var tableName = GetTableName(ent, db);
+
+            var sql = string.Format("UPDATE {1} SET \"geom\"= ST_Force2D(public.ST_GeomFromText('{2}', 4326)) WHERE \"ID\"  IN ({0})", ent.Id, tableName, WKTString);
+
+            db.Database.ExecuteSqlRaw(sql);
+        }
+
+        #endregion
 
         private static string GetTableName(object ent, ExperienceContext db)
         {
